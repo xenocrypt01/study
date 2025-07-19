@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topic 11: Basic Object-Oriented Programming - Smiley Academy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    h2 {
+      color: black;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+    p, li, code {
+      color: #333;
+    }
+    code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .example {
+      background: #fff3cd;
+      border-left: 5px solid #ffeeba;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #007bff;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Topic 11: Basic Object-Oriented Programming (OOP)</h1>
+
+  <h2>11.1 What is Object-Oriented Programming?</h2>
+  <p>OOP is a programming paradigm that uses <strong>objects</strong> and <strong>classes</strong> to structure code. It helps in organizing complex programs by modeling real-world entities.</p>
+
+  <h2>11.2 Classes and Objects</h2>
+  <ul>
+    <li><strong>Class:</strong> A blueprint for creating objects.</li>
+    <li><strong>Object:</strong> An instance of a class with data and behavior.</li>
+  </ul>
+
+  <div class="example">
+    <code>class Person:</code><br>
+    <code>&nbsp;&nbsp;def __init__(self, name, age):</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;self.name = name</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;self.age = age</code><br><br>
+
+    <code>person1 = Person("Alice", 30)</code><br>
+    <code>print(person1.name)</code>
+  </div>
+
+  <h2>11.3 The <code>__init__</code> Method</h2>
+  <p>This special method is called when an object is created. It initializes the object's attributes.</p>
+
+  <h2>11.4 Methods in Classes</h2>
+  <p>Functions defined inside a class are called methods.</p>
+
+  <div class="example">
+    <code>class Dog:</code><br>
+    <code>&nbsp;&nbsp;def __init__(self, name):</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;self.name = name</code><br><br>
+
+    <code>&nbsp;&nbsp;def bark(self):</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;print(f"{self.name} says woof!")</code><br><br>
+
+    <code>dog1 = Dog("Buddy")</code><br>
+    <code>dog1.bark()</code>
+  </div>
+
+  <h2>11.5 Inheritance</h2>
+  <p>Inheritance allows a class to inherit properties and methods from another class.</p>
+
+  <div class="example">
+    <code>class Animal:</code><br>
+    <code>&nbsp;&nbsp;def speak(self):</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;print("Animal speaks")</code><br><br>
+
+    <code>class Cat(Animal):</code><br>
+    <code>&nbsp;&nbsp;def speak(self):</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;print("Meow!")</code><br><br>
+
+    <code>cat1 = Cat()</code><br>
+    <code>cat1.speak()</code>
+  </div>
+
+  <h2>11.6 Encapsulation</h2>
+  <p>Encapsulation means restricting access to methods and attributes to protect data integrity.</p>
+
+  <div class="example">
+    <code>class BankAccount:</code><br>
+    <code>&nbsp;&nbsp;def __init__(self, balance):</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;self.__balance = balance  # private attribute</code><br><br>
+
+    <code>&nbsp;&nbsp;def get_balance(self):</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;return self.__balance</code><br><br>
+
+    <code>account = BankAccount(1000)</code><br>
+    <code>print(account.get_balance())</code>
+  </div>
+
+  <h2>11.7 Summary</h2>
+  <ul>
+    <li>OOP helps in structuring code via classes and objects.</li>
+    <li>Key concepts: Classes, Objects, Methods, Inheritance, Encapsulation.</li>
+    <li>It makes code reusable, organized, and scalable.</li>
+  </ul>
+
+  <footer>© 2025 Smiley Academy | Topic 11: Basic Object-Oriented Programming</footer>
+
+</body>
+</html>
