@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smiley Academy - Programming Course Topics</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      padding: 20px;
+      margin: 0;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+    .menu-btn {
+      font-size: 24px;
+      cursor: pointer;
+      border: 2px solid #007bff;
+      background: white;
+      padding: 5px 12px;
+      border-radius: 50%;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .menu-btn:hover {
+      background: #007bff;
+      color: white;
+      transform: rotate(90deg);
+    }
+    .dropdown {
+      display: none;
+      position: absolute;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      width: 220px;
+      top: 60px;
+      left: 20px;
+      padding: 10px 0;
+      z-index: 999;
+    }
+    .dropdown button {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: 12px 20px;
+      font-size: 15px;
+      cursor: pointer;
+      color: #333;
+      transition: background 0.3s, padding-left 0.3s;
+    }
+    .dropdown button:hover {
+      background: #007bff;
+      color: white;
+      padding-left: 30px;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+      flex-grow: 1;
+    }
+    .topics-container {
+      max-width: 600px;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .topic-btn {
+      color: white;
+      border: 2px solid #007bff;
+      padding: 15px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      background-image: linear-gradient(45deg, #6a11cb, #2575fc);
+      background-size: 200% auto;
+    }
+    .topic-btn:hover {
+      background-position: right center;
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    }
+    .notification {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #007bff;
+      color: white;
+      padding: 15px 20px;
+      border-radius: 5px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.5s, transform 0.5s;
+      transform: translateY(20px);
+      z-index: 999;
+    }
+    .notification.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 15px;
+      background: #f0f0f0;
+      border-top: 1px solid #ccc;
+      color: #555;
+      font-size: 14px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <button class="menu-btn" onclick="toggleMenu()">&#9776;</button>
+    <h1>Smiley Academy Topics</h1>
+  </div>
+
+  <div id="menuDropdown" class="dropdown">
+    <button onclick="goBack()">🏠 Go Back Home</button>
+    <button onclick="support()">📞 Support & Help</button>
+    <button onclick="terms()">📜 Terms & Privacy</button>
+    <button onclick="feedback()">✍️ Feedback</button>
+    <button onclick="logout()">🔒 Logout</button>
+    <button onclick="promptDelete()">🗑️ Delete Account</button>
+  </div>
+
+  <div class="topics-container">
+    <button class="topic-btn" onclick="goTo('topic1.html')">1. Introduction to Programming Concepts</button>
+    <button class="topic-btn" onclick="goTo('topic2.html')">2. Setting Up the Environment</button>
+    <button class="topic-btn" onclick="goTo('topic3.html')">3. Variables and Data Types</button>
+    <button class="topic-btn" onclick="goTo('topic4.html')">4. Operators</button>
+    <button class="topic-btn" onclick="goTo('topic5.html')">5. Input and Output</button>
+    <button class="topic-btn" onclick="goTo('topic6.html')">6. Control Flow (If/Else Statements)</button>
+    <button class="topic-btn" onclick="goTo('topic7.html')">7. Loops (For/While Loops)</button>
+    <button class="topic-btn" onclick="goTo('topic8.html')">8. Functions</button>
+    <button class="topic-btn" onclick="goTo('topic9.html')">9. Lists and Collections</button>
+    <button class="topic-btn" onclick="goTo('topic10.html')">10. Error Handling</button>
+    <button class="topic-btn" onclick="goTo('topic11.html')">11. Basic Object-Oriented Programming</button>
+    <button class="topic-btn" onclick="goTo('topic12.html')">12. Simple Project</button>
+  </div>
+
+  <div id="notification" class="notification"></div>
+
+  <footer>
+    &copy; 2025 Smiley Academy. All Rights Reserved. | <a href="terms.html">Terms</a> | <a href="privacy.html">Privacy</a>
+  </footer>
+
+  <script>
+    const user = { password: '123456' };
+
+    function toggleMenu() {
+      const menu = document.getElementById('menuDropdown');
+      menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+    }
+
+    function goBack() {
+      showNotification('Returning to Home...');
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000);
+    }
+
+    function goTo(link) {
+      window.location.href = link;
+    }
+
+    function logout() {
+      showNotification('You have been logged out.');
+      setTimeout(() => {
+        window.location.href = 'login.html';
+      }, 1200);
+    }
+
+    function promptDelete() {
+      const pwd = prompt("Enter your password to confirm account deletion:");
+      if (pwd === null) return;
+      if (pwd === user.password) {
+        showNotification('Account deleted successfully.');
+        setTimeout(() => {
+          window.location.href = 'signup.html';
+        }, 1200);
+      } else {
+        showNotification('Incorrect password. Account not deleted.');
+      }
+    }
+
+    function support() {
+      showNotification('Redirecting to Support...');
+      setTimeout(() => {
+        window.location.href = 'support.html';
+      }, 1200);
+    }
+
+    function terms() {
+      showNotification('Opening Terms & Privacy...');
+      setTimeout(() => {
+        window.location.href = 'terms.html';
+      }, 1200);
+    }
+
+    function feedback() {
+      showNotification('Redirecting to Feedback...');
+      setTimeout(() => {
+        window.location.href = 'feedback.html';
+      }, 1200);
+    }
+
+    function showNotification(message) {
+      const notif = document.getElementById('notification');
+      notif.textContent = message;
+      notif.classList.add('show');
+
+      setTimeout(() => {
+        notif.classList.remove('show');
+      }, 3000);
+    }
+  </script>
+
+</body>
+</html>
