@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topic 12: Simple Project - Smiley Academy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    h2 {
+      color: black;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+    p, li, code {
+      color: #333;
+    }
+    code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .example {
+      background: #fff3cd;
+      border-left: 5px solid #ffeeba;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #007bff;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Topic 12: Simple Project - Calculator</h1>
+
+  <h2>12.1 Overview</h2>
+  <p>Let's build a simple calculator in Python that can add, subtract, multiply, and divide numbers.</p>
+
+  <h2>12.2 Project Requirements</h2>
+  <ul>
+    <li>Accept user input for two numbers.</li>
+    <li>Provide options to add, subtract, multiply, or divide.</li>
+    <li>Display the result.</li>
+    <li>Handle division by zero gracefully.</li>
+  </ul>
+
+  <h2>12.3 Project Code Example</h2>
+
+  <div class="example">
+    <code>def add(x, y):</code><br>
+    <code>&nbsp;&nbsp;return x + y</code><br><br>
+
+    <code>def subtract(x, y):</code><br>
+    <code>&nbsp;&nbsp;return x - y</code><br><br>
+
+    <code>def multiply(x, y):</code><br>
+    <code>&nbsp;&nbsp;return x * y</code><br><br>
+
+    <code>def divide(x, y):</code><br>
+    <code>&nbsp;&nbsp;if y == 0:</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;return "Cannot divide by zero!"</code><br>
+    <code>&nbsp;&nbsp;return x / y</code><br><br>
+
+    <code>print("Select operation:")</code><br>
+    <code>print("1. Add")</code><br>
+    <code>print("2. Subtract")</code><br>
+    <code>print("3. Multiply")</code><br>
+    <code>print("4. Divide")</code><br><br>
+
+    <code>choice = input("Enter choice (1/2/3/4): ")</code><br>
+    <code>num1 = float(input("Enter first number: "))</code><br>
+    <code>num2 = float(input("Enter second number: "))</code><br><br>
+
+    <code>if choice == '1':</code><br>
+    <code>&nbsp;&nbsp;print("Result:", add(num1, num2))</code><br>
+    <code>elif choice == '2':</code><br>
+    <code>&nbsp;&nbsp;print("Result:", subtract(num1, num2))</code><br>
+    <code>elif choice == '3':</code><br>
+    <code>&nbsp;&nbsp;print("Result:", multiply(num1, num2))</code><br>
+    <code>elif choice == '4':</code><br>
+    <code>&nbsp;&nbsp;print("Result:", divide(num1, num2))</code><br>
+    <code>else:</code><br>
+    <code>&nbsp;&nbsp;print("Invalid input!")</code>
+  </div>
+
+  <h2>12.4 What You Learned</h2>
+  <ul>
+    <li>Defining and using functions.</li>
+    <li>Handling user input and choices.</li>
+    <li>Implementing error checks (like divide by zero).</li>
+  </ul>
+
+  <h2>12.5 Try It Yourself</h2>
+  <p>Expand this project by:</p>
+  <ul>
+    <li>Adding more operations (e.g., power, modulus).</li>
+    <li>Creating a loop to allow multiple calculations.</li>
+    <li>Building a simple GUI with a library like Tkinter.</li>
+  </ul>
+
+  <footer>© 2025 Smiley Academy | Topic 12: Simple Project</footer>
+
+</body>
+</html>
