@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topic 10: Error Handling - Smiley Academy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    h2 {
+      color: black;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+    p, li, code {
+      color: #333;
+    }
+    code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .example {
+      background: #fff3cd;
+      border-left: 5px solid #ffeeba;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #007bff;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Topic 10: Error Handling</h1>
+
+  <h2>10.1 What is Error Handling?</h2>
+  <p>Error handling allows you to manage and respond to errors in your code gracefully without crashing the program.</p>
+
+  <h2>10.2 Types of Errors</h2>
+  <ul>
+    <li><strong>Syntax Errors:</strong> Mistakes in the code structure.</li>
+    <li><strong>Runtime Errors:</strong> Errors that occur while the program is running (e.g., division by zero).</li>
+    <li><strong>Logical Errors:</strong> The program runs but produces incorrect results.</li>
+  </ul>
+
+  <h2>10.3 Try and Except</h2>
+  <p>The <code>try</code> block lets you test a block of code for errors. The <code>except</code> block lets you handle the error.</p>
+
+  <div class="example">
+    <code>try:</code><br>
+    <code>&nbsp;&nbsp;result = 10 / 0</code><br>
+    <code>except ZeroDivisionError:</code><br>
+    <code>&nbsp;&nbsp;print("Cannot divide by zero!")</code>
+  </div>
+
+  <h2>10.4 Catching Multiple Exceptions</h2>
+  <div class="example">
+    <code>try:</code><br>
+    <code>&nbsp;&nbsp;num = int("abc")</code><br>
+    <code>except ValueError:</code><br>
+    <code>&nbsp;&nbsp;print("Invalid number!")</code><br>
+    <code>except Exception as e:</code><br>
+    <code>&nbsp;&nbsp;print(f"An error occurred: {e}")</code>
+  </div>
+
+  <h2>10.5 Else and Finally</h2>
+  <ul>
+    <li><strong>else:</strong> Executes if no errors occur.</li>
+    <li><strong>finally:</strong> Executes no matter what, useful for cleanup actions.</li>
+  </ul>
+
+  <div class="example">
+    <code>try:</code><br>
+    <code>&nbsp;&nbsp;print("Trying something...")</code><br>
+    <code>except:</code><br>
+    <code>&nbsp;&nbsp;print("An error occurred!")</code><br>
+    <code>else:</code><br>
+    <code>&nbsp;&nbsp;print("No errors!")</code><br>
+    <code>finally:</code><br>
+    <code>&nbsp;&nbsp;print("This always runs!")</code>
+  </div>
+
+  <h2>10.6 Raising Custom Errors</h2>
+  <p>You can raise your own exceptions using <code>raise</code> keyword.</p>
+
+  <div class="example">
+    <code>age = -5</code><br>
+    <code>if age &lt; 0:</code><br>
+    <code>&nbsp;&nbsp;raise ValueError("Age cannot be negative!")</code>
+  </div>
+
+  <h2>10.7 Summary</h2>
+  <ul>
+    <li><code>try</code> and <code>except</code> help handle errors without stopping the program.</li>
+    <li><code>else</code> runs if no errors occur.</li>
+    <li><code>finally</code> always executes for cleanups.</li>
+    <li>Custom errors can be raised using <code>raise</code>.</li>
+  </ul>
+
+  <footer>© 2025 Smiley Academy | Topic 10: Error Handling</footer>
+
+</body>
+</html>
