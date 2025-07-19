@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smiley Academy | Sign Up</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .signup-container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 350px;
+      text-align: center;
+    }
+    .signup-container h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    .signup-btn {
+      width: 100%;
+      padding: 12px;
+      background: #007bff;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .signup-btn:hover {
+      background: #0056b3;
+    }
+    .message {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    .login-link {
+      margin-top: 15px;
+      display: block;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .login-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="signup-container">
+    <h2>Sign Up to Smiley Academy</h2>
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email Address" required>
+    <input type="tel" id="phone" placeholder="Phone Number" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+    <button class="signup-btn" onclick="register()">Sign Up</button>
+    <div class="message" id="message"></div>
+    
+    <a class="login-link" href="login.html">Already have an account? Login</a>
+  </div>
+
+  <script>
+    const users = [];
+
+    function isValidPhone(phone) {
+      return /^\d{10,15}$/.test(phone);
+    }
+
+    function isValidEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    function register() {
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      const message = document.getElementById('message');
+
+      message.style.color = 'red';
+
+      if (!name || !email || !phone || !password || !confirmPassword) {
+        message.textContent = 'Please fill in all fields.';
+        return;
+      }
+
+      if (!isValidEmail(email)) {
+        message.textContent = 'Please enter a valid email address.';
+        return;
+      }
+
+      if (!isValidPhone(phone)) {
+        message.textContent = 'Enter a valid phone number (10-15 digits).';
+        return;
+      }
+
+      if (password !== confirmPassword) {
+        message.textContent = 'Passwords do not match.';
+        return;
+      }
+
+      const emailExists = users.some(user => user.email === email);
+      if (emailExists) {
+        message.textContent = 'You already have an account with this email.';
+        return;
+      }
+
+      users.push({ name, email, phone, password });
+
+      message.style.color = 'green';
+      message.textContent = 'Creating your account... Please wait...';
+
+      setTimeout(() => {
+        window.location.href = 'learn.html';
+      }, 2000);
+    }
+  </script>
+
+</body>
+</html>
