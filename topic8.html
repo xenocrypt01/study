@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topic 8: Functions - Smiley Academy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    h2 {
+      color: black;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+    p, li, code {
+      color: #333;
+    }
+    code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .example {
+      background: #fff3cd;
+      border-left: 5px solid #ffeeba;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #007bff;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Topic 8: Functions</h1>
+
+  <h2>8.1 What is a Function?</h2>
+  <p>A function is a reusable block of code that performs a specific task. Functions help organize code, make it more readable, and avoid repetition.</p>
+
+  <h2>8.2 Defining a Function</h2>
+  <p>Functions are defined using the <code>def</code> keyword.</p>
+
+  <div class="example">
+    <code>def greet():</code><br>
+    <code>&nbsp;&nbsp;print("Hello, Welcome to Smiley Academy!")</code>
+  </div>
+
+  <h2>8.3 Calling a Function</h2>
+  <p>After defining a function, you can call it by its name followed by parentheses:</p>
+
+  <div class="example">
+    <code>greet()</code>
+  </div>
+
+  <h2>8.4 Functions with Parameters</h2>
+  <p>Functions can accept parameters to work with external data.</p>
+
+  <div class="example">
+    <code>def greet_user(name):</code><br>
+    <code>&nbsp;&nbsp;print(f"Hello, {name}!")</code><br><br>
+    <code>greet_user("Alice")</code>
+  </div>
+
+  <h2>8.5 Functions with Return Values</h2>
+  <p>Functions can return values using the <code>return</code> statement.</p>
+
+  <div class="example">
+    <code>def add(a, b):</code><br>
+    <code>&nbsp;&nbsp;return a + b</code><br><br>
+    <code>result = add(5, 3)</code><br>
+    <code>print(result)</code>
+  </div>
+
+  <h2>8.6 Default Parameter Values</h2>
+  <p>You can set default values for parameters:</p>
+
+  <div class="example">
+    <code>def greet(name="Student"):</code><br>
+    <code>&nbsp;&nbsp;print(f"Hello, {name}!")</code><br><br>
+    <code>greet()</code> <br>
+    <code>greet("Bob")</code>
+  </div>
+
+  <h2>8.7 Keyword Arguments</h2>
+  <p>Arguments can be passed using parameter names, allowing flexibility in order:</p>
+
+  <div class="example">
+    <code>def profile(name, age):</code><br>
+    <code>&nbsp;&nbsp;print(f"Name: {name}, Age: {age}")</code><br><br>
+    <code>profile(age=25, name="Alice")</code>
+  </div>
+
+  <h2>8.8 Why Use Functions?</h2>
+  <ul>
+    <li>Reduces code duplication</li>
+    <li>Makes code modular and organized</li>
+    <li>Improves readability and maintenance</li>
+    <li>Enables reusability across projects</li>
+  </ul>
+
+  <h2>8.9 Summary</h2>
+  <p>Functions are essential for writing clean, organized, and efficient code. They encapsulate tasks and allow for code reusability, making programs easier to manage.</p>
+
+  <footer>© 2025 Smiley Academy | Topic 8: Functions</footer>
+
+</body>
+</html>
