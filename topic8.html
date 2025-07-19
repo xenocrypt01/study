@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topic 9: Lists and Collections - Smiley Academy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    h2 {
+      color: black;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+    p, li, code {
+      color: #333;
+    }
+    code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .example {
+      background: #fff3cd;
+      border-left: 5px solid #ffeeba;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #007bff;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Topic 9: Lists and Collections</h1>
+
+  <h2>9.1 What are Lists?</h2>
+  <p>A list is a collection of items that are ordered and changeable. Lists can store multiple data types like numbers, strings, or even other lists.</p>
+
+  <h2>9.2 Creating a List</h2>
+  <div class="example">
+    <code>fruits = ["apple", "banana", "cherry"]</code>
+  </div>
+
+  <h2>9.3 Accessing List Items</h2>
+  <div class="example">
+    <code>print(fruits[0])  # Outputs: apple</code>
+  </div>
+
+  <h2>9.4 Changing List Items</h2>
+  <div class="example">
+    <code>fruits[1] = "blueberry"</code><br>
+    <code>print(fruits)</code>
+  </div>
+
+  <h2>9.5 List Methods</h2>
+  <ul>
+    <li><code>append()</code> - Adds an item to the end</li>
+    <li><code>insert()</code> - Inserts an item at a specified index</li>
+    <li><code>remove()</code> - Removes the first occurrence of an item</li>
+    <li><code>pop()</code> - Removes an item by index</li>
+    <li><code>sort()</code> - Sorts the list</li>
+  </ul>
+
+  <div class="example">
+    <code>fruits.append("orange")</code><br>
+    <code>print(fruits)</code>
+  </div>
+
+  <h2>9.6 Looping Through a List</h2>
+  <div class="example">
+    <code>for fruit in fruits:</code><br>
+    <code>&nbsp;&nbsp;print(fruit)</code>
+  </div>
+
+  <h2>9.7 Other Collections</h2>
+  <ul>
+    <li><strong>Tuples:</strong> Immutable lists <code>my_tuple = (1, 2, 3)</code></li>
+    <li><strong>Sets:</strong> Unordered collections without duplicates <code>my_set = {1, 2, 3}</code></li>
+    <li><strong>Dictionaries:</strong> Key-value pairs <code>my_dict = {"name": "Alice", "age": 25}</code></li>
+  </ul>
+
+  <h2>9.8 Example of a Dictionary</h2>
+  <div class="example">
+    <code>person = {"name": "John", "age": 30}</code><br>
+    <code>print(person["name"])</code>
+  </div>
+
+  <h2>9.9 Summary</h2>
+  <p>Lists and collections help store and manage multiple data items efficiently. Understanding them is crucial for data organization in Python.</p>
+
+  <footer>© 2025 Smiley Academy | Topic 9: Lists and Collections</footer>
+
+</body>
+</html>
