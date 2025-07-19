@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topic 6: Control Flow (If/Else Statements) - Smiley Academy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    h2 {
+      color: black;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+    p, li, code {
+      color: #333;
+    }
+    code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .example {
+      background: #fff3cd;
+      border-left: 5px solid #ffeeba;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #007bff;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Topic 6: Control Flow (If/Else Statements)</h1>
+
+  <h2>6.1 What is Control Flow?</h2>
+  <p>Control flow allows a program to make decisions and execute certain parts of code based on conditions. This helps create dynamic and responsive programs.</p>
+
+  <h2>6.2 If Statement</h2>
+  <p>The <code>if</code> statement runs a block of code if a condition is true.</p>
+
+  <div class="example">
+    <code>age = 18</code><br>
+    <code>if age &gt;= 18:</code><br>
+    <code>&nbsp;&nbsp;print("You are an adult.")</code>
+  </div>
+
+  <h2>6.3 If-Else Statement</h2>
+  <p>Use <code>else</code> to run an alternative block when the condition is false.</p>
+
+  <div class="example">
+    <code>age = 16</code><br>
+    <code>if age &gt;= 18:</code><br>
+    <code>&nbsp;&nbsp;print("Adult")</code><br>
+    <code>else:</code><br>
+    <code>&nbsp;&nbsp;print("Minor")</code>
+  </div>
+
+  <h2>6.4 Elif Statement</h2>
+  <p><code>elif</code> means "else if". It allows multiple conditions to be checked sequentially.</p>
+
+  <div class="example">
+    <code>marks = 75</code><br>
+    <code>if marks &gt;= 90:</code><br>
+    <code>&nbsp;&nbsp;print("Grade A")</code><br>
+    <code>elif marks &gt;= 70:</code><br>
+    <code>&nbsp;&nbsp;print("Grade B")</code><br>
+    <code>else:</code><br>
+    <code>&nbsp;&nbsp;print("Grade C")</code>
+  </div>
+
+  <h2>6.5 Nested If Statements</h2>
+  <p>Conditions can be nested within each other for more complex logic.</p>
+
+  <div class="example">
+    <code>num = 10</code><br>
+    <code>if num &gt; 0:</code><br>
+    <code>&nbsp;&nbsp;if num % 2 == 0:</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;print("Positive Even Number")</code>
+  </div>
+
+  <h2>6.6 Logical Operators with Conditions</h2>
+  <p>Use <code>and</code>, <code>or</code>, and <code>not</code> to combine conditions.</p>
+
+  <div class="example">
+    <code>age = 20</code><br>
+    <code>if age &gt;= 18 and age &lt;= 60:</code><br>
+    <code>&nbsp;&nbsp;print("Working Age Group")</code>
+  </div>
+
+  <h2>6.7 Summary</h2>
+  <ul>
+    <li><code>if</code> - Executes when a condition is true.</li>
+    <li><code>else</code> - Executes when the condition is false.</li>
+    <li><code>elif</code> - Checks another condition if the previous ones are false.</li>
+    <li>Nested and combined conditions allow for complex decision-making.</li>
+  </ul>
+
+  <footer>© 2025 Smiley Academy | Topic 6: Control Flow (If/Else Statements)</footer>
+
+</body>
+</html>
