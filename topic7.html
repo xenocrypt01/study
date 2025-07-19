@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topic 7: Loops (For/While) - Smiley Academy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    h2 {
+      color: black;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+    p, li, code {
+      color: #333;
+    }
+    code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .example {
+      background: #fff3cd;
+      border-left: 5px solid #ffeeba;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #007bff;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Topic 7: Loops (For/While)</h1>
+
+  <h2>7.1 What are Loops?</h2>
+  <p>Loops allow you to execute a block of code multiple times. They are essential for tasks that require repetition, such as processing items in a list or counting numbers.</p>
+
+  <h2>7.2 For Loop</h2>
+  <p>A <strong>for loop</strong> iterates over a sequence like a list, tuple, or range.</p>
+
+  <div class="example">
+    <code>for i in range(5):</code><br>
+    <code>&nbsp;&nbsp;print(i)</code>
+  </div>
+
+  <p>This will print numbers from 0 to 4.</p>
+
+  <h2>7.3 While Loop</h2>
+  <p>A <strong>while loop</strong> continues to execute as long as a condition is true.</p>
+
+  <div class="example">
+    <code>count = 0</code><br>
+    <code>while count &lt; 5:</code><br>
+    <code>&nbsp;&nbsp;print(count)</code><br>
+    <code>&nbsp;&nbsp;count += 1</code>
+  </div>
+
+  <h2>7.4 Nested Loops</h2>
+  <p>Loops can be placed inside other loops. This is useful for working with multi-dimensional data like matrices.</p>
+
+  <div class="example">
+    <code>for i in range(3):</code><br>
+    <code>&nbsp;&nbsp;for j in range(2):</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;print(f"i={i}, j={j}")</code>
+  </div>
+
+  <h2>7.5 Break and Continue</h2>
+  <ul>
+    <li><code>break</code>: Exits the loop immediately.</li>
+    <li><code>continue</code>: Skips the current iteration and continues to the next.</li>
+  </ul>
+
+  <div class="example">
+    <strong>Break Example:</strong><br>
+    <code>for i in range(5):</code><br>
+    <code>&nbsp;&nbsp;if i == 3:</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;break</code><br>
+    <code>&nbsp;&nbsp;print(i)</code>
+  </div>
+
+  <div class="example">
+    <strong>Continue Example:</strong><br>
+    <code>for i in range(5):</code><br>
+    <code>&nbsp;&nbsp;if i == 3:</code><br>
+    <code>&nbsp;&nbsp;&nbsp;&nbsp;continue</code><br>
+    <code>&nbsp;&nbsp;print(i)</code>
+  </div>
+
+  <h2>7.6 Loop with Else</h2>
+  <p>A loop can have an <code>else</code> block that runs after the loop finishes naturally (without <code>break</code>).</p>
+
+  <div class="example">
+    <code>for i in range(3):</code><br>
+    <code>&nbsp;&nbsp;print(i)</code><br>
+    <code>else:</code><br>
+    <code>&nbsp;&nbsp;print("Loop finished!")</code>
+  </div>
+
+  <h2>7.7 Summary</h2>
+  <ul>
+    <li>Use <code>for</code> when iterating over a sequence.</li>
+    <li>Use <code>while</code> when the number of iterations is unknown.</li>
+    <li>Control loop behavior using <code>break</code> and <code>continue</code>.</li>
+    <li>Loops can have <code>else</code> clauses for completion logic.</li>
+  </ul>
+
+  <footer>© 2025 Smiley Academy | Topic 7: Loops (For/While)</footer>
+
+</body>
+</html>
