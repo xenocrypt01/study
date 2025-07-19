@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topic 5: Input and Output - Smiley Academy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #007bff;
+    }
+    h2 {
+      color: black;
+      border-bottom: 2px solid #007bff;
+      padding-bottom: 5px;
+    }
+    p, li, code {
+      color: #333;
+    }
+    code {
+      background: #eee;
+      padding: 3px 6px;
+      border-radius: 4px;
+      display: inline-block;
+    }
+    .example {
+      background: #fff3cd;
+      border-left: 5px solid #ffeeba;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #007bff;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Topic 5: Input and Output</h1>
+
+  <h2>5.1 Introduction to Input and Output</h2>
+  <p>Input and Output (I/O) operations allow interaction between the user and the program. Input captures user data, while output displays information to the user.</p>
+
+  <h2>5.2 The <code>input()</code> Function</h2>
+  <p>The <code>input()</code> function is used to take data from the user as a string.</p>
+
+  <div class="example">
+    <strong>Example:</strong><br>
+    <code>name = input("Enter your name: ")</code><br>
+    <code>print("Hello", name)</code>
+  </div>
+
+  <h2>5.3 Converting Input to Other Data Types</h2>
+  <p>By default, input returns a string. To work with numbers, you must convert them:</p>
+
+  <div class="example">
+    <code>age = int(input("Enter your age: "))</code><br>
+    <code>height = float(input("Enter your height: "))</code>
+  </div>
+
+  <h2>5.4 The <code>print()</code> Function</h2>
+  <p>The <code>print()</code> function outputs data to the screen.</p>
+
+  <div class="example">
+    <code>print("This is an output message.")</code><br>
+    <code>print("You are", age, "years old.")</code>
+  </div>
+
+  <h2>5.5 Using <code>print()</code> with Formatting</h2>
+  <p>Use formatted strings for cleaner output:</p>
+
+  <div class="example">
+    <code>name = "Alice"</code><br>
+    <code>print(f"Welcome, {name}!")</code>
+  </div>
+
+  <h2>5.6 End and Separator in <code>print()</code></h2>
+  <p>Customize the print behavior with <code>end</code> and <code>sep</code>:</p>
+
+  <div class="example">
+    <code>print("Hello", end=" ")</code><br>
+    <code>print("World!")</code><br>
+    <code>print("A", "B", "C", sep="-")</code>
+  </div>
+
+  <h2>5.7 Multi-Line Input and Output</h2>
+  <p>You can combine inputs and outputs to create interactive experiences.</p>
+
+  <div class="example">
+    <code>
+      name = input("Enter your name: ")<br>
+      age = input("Enter your age: ")<br>
+      print(f"{name} is {age} years old.")
+    </code>
+  </div>
+
+  <h2>5.8 Summary</h2>
+  <p>Input and output are fundamental for interaction in programs. With <code>input()</code> and <code>print()</code>, you can build engaging and user-driven applications.</p>
+
+  <footer>© 2025 Smiley Academy | Topic 5: Input and Output</footer>
+
+</body>
+</html>
