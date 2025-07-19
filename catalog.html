@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalog | Smiley Academy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f0f0;
+      color: #333;
+    }
+    .header {
+      background: #0a0f2c;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    .header h1 {
+      margin: 0;
+    }
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .course-card {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .course-card:hover {
+      transform: scale(1.05);
+    }
+    .course-card h3 {
+      margin-top: 0;
+    }
+    .course-card button {
+      background: #007bff; /* Blue color */
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .course-card button:hover {
+      background: #0056b3; /* Darker blue on hover */
+    }
+    .footer {
+      background: #0a0f2c;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Smiley Academy - Course Catalog</h1>
+  </div>
+
+  <div class="course-grid">
+    <div class="course-card">
+      <h3>Introduction to JavaScript</h3>
+      <p>Learn the essentials of JavaScript, the language of interactive websites.</p>
+      <button onclick="location.href='index.html'">Start Course</button>
+    </div>
+    
+    <div class="course-card">
+      <h3>HTML & CSS Fundamentals</h3>
+      <p>Discover how to build and style beautiful web pages.</p>
+      <button>Coming Soon</button>
+    </div>
+
+    <div class="course-card">
+      <h3>Python for Absolute Beginners</h3>
+      <p>Step into the world of programming with Python.</p>
+      <button>Coming Soon</button>
+    </div>
+
+    <div class="course-card">
+      <h3>Web Development Basics</h3>
+      <p>Understand the core principles behind websites and web servers.</p>
+      <button>Coming Soon</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    &copy; 2025 Smiley Academy. All rights reserved.
+  </div>
+
+</body>
+</html>
